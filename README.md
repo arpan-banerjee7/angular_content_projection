@@ -25,12 +25,12 @@ removed and added back to the DOM.
 
 Now if you look at the console, then you can see `ngOninit` nor the `ngOnDestroy` life-cycle hooks are called, and the time gets udpated.
 
-This behaviour is due to the fact--
+### This behaviour is due to the fact--
 
-We can see that every time our expansion panel is rendered or removed, the life-cycle hooks of our projected content is called.
-The life-cycle hooks of the projected content are bound to the life-cycle of the host.
+*We can see that every time our expansion panel is rendered or removed, the life-cycle hooks of our projected content is called.
+The life-cycle hooks of the projected content are bound to the life-cycle of the host.*
 
-This can be solved by using `<ng-template></ng-tenplate>`  directive.
+#### This can be solved by using `<ng-template></ng-tenplate>`  directive.
 
 1. First, we add a new @Input that accepts a TemplatRef , which is our content.
 2. Then we adjust the expander's HTML to render the received content. As I have done in the `ExpansionTemplateComponent`
