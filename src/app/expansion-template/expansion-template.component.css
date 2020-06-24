@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@300;400&display=swap");
+* {
+  font-family: "Pangolin", cursive;
+}
+html {
+  font-size: 20px;
+}
+.wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+.header {
+  border: 2px solid rgb(231, 153, 153);
+  background-color: rgb(209, 127, 127);
+  color: rgba(0, 0, 0, 0.753);
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.header :hover {
+  color: rgb(255, 255, 255);
+}
+
+.content {
+  border: 2px solid rgb(231, 153, 153);
+  background-color: rgba(236, 216, 216, 0.925);
+  padding: 100px;
+  text-align: center;
+}
+.footer {
+  border: 2px solid rgb(231, 153, 153);
+  background-color: rgb(209, 127, 127);
+  padding: 10px;
+  text-align: center;
+  font-size: 80%;
+}

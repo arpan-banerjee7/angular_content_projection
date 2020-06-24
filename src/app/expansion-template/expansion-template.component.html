@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="header" (click)="isHidden = !isHidden">
+    <h2>{{ title }}</h2>
+  </div>
+
+  <div class="content" *ngIf="isHidden">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </div>
+
+  <div class="footer" *ngIf="isHidden">
+    <ng-container [ngTemplateOutlet]="footer"></ng-container>
+  </div>
+</div>

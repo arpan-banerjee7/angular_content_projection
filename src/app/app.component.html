@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="toggleButton">
+    <!-- The lifecylce hooks of the projected component are bound to the lifecycle 
+      hooks of the parent component -->
+    <button class="btn" (click)="toggleExpansion = !toggleExpansion">
+      Update clock for Ng Content
+    </button>
+  </div>
+  <div class="accordion">
+    <app-expansion
+      title="Passing content through ng content"
+      isHidden="false"
+      *ngIf="toggleExpansion"
+    >
+      <div class="myPanelBody">
+        <app-clock></app-clock>
+      </div>
+      <div class="myPanelFooter">
+        <p>Notice the clock updates only when update clock button is clicked</p>
+      </div>
+    </app-expansion>
+  </div>
+</div>
+<div class="container">
+  <div class="accordion">
+    <app-expansion-template
+      title="Passing content through Template reference"
+      isHidden="false"
+      [content]="content"
+      [footer]="footer"
+    ></app-expansion-template>
+    <ng-template #content>
+      <div class="myPanelBody">
+        <app-clock></app-clock>
+      </div>
+    </ng-template>
+    <ng-template #footer>
+      <div class="myPanelFooter">
+        <p>Notice the clock updates even when you toggle</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
