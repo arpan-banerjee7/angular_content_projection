@@ -13,7 +13,7 @@ When the app loads, you can see a `toggle button` and below it the **second comp
 To understand the behaviour of `content projection` in angular, open the *developer tools* and have a look at the *console*.
 
 ### Now there is a catch while using `<ng-content></ng-content>`
-But, what happens if you close and reopen the expander after 5 minutes? It still displays 9:51, why is that?
+But, what happens if you close and reopen the expander after 5 minutes? It still displays the same time right?  why is that?
 The source of the problem is how `ng-content` life-cycle hook calls itself.
 Even though our `clock component` isn’t yet rendered (the `ngIf` expression of the `expansion` is still `false`) the `ngOnInit` lifecycle hook is already called.
 
